@@ -32,7 +32,7 @@ The steps that is followed are:
 - Model Evaluation
 - Testing
 
-## Data Cleaning
+## 1. Data Cleaning
 
 The steps that is followed are:
 
@@ -43,7 +43,7 @@ The steps that is followed are:
 - Check statistics of data set
 - Check various categories present in the different categorical column
 
-## Exploratory data analysis (EDA)
+## 2. Exploratory data analysis (EDA)
 
 The steps that is followed are:
 
@@ -51,7 +51,7 @@ The steps that is followed are:
 - Bivariate Analysis
 - Multivariate Analysis
 
-## Data Pre-Processing
+## 3. Data Pre-Processing
 
 The steps that is followed are:
 
@@ -59,7 +59,7 @@ The steps that is followed are:
 - Converting Categorical variable to Numerical variable
 - Train - Test split
 
-## Model Training and Hyperparameter Tuning
+## 4. Model Training and Hyperparameter Tuning
 
 Total 8 models have been used to train our dataset and Randomisedcv is used to hypertune the models and pick the best model.
 The models are:
@@ -73,7 +73,7 @@ The models are:
 - CatBoost Regressor
 - Random Forest Regressor
 
-## Model Evaluation
+## 5. Model Evaluation
 
 Model performance for Training set
 - Root Mean Squared Error: 3.6252
