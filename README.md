@@ -5,7 +5,7 @@
 In this project, I examined how the student's performance (test scores) is affected by other variables such as Gender, Ethnicity, Parental level of education, Lunch and Test preparation course.
 
 The link for the dataset:  https://www.kaggle.com/datasets/spscientist/students-performance-in-exams?datasetId=74977
-You can find the dataset in my GitHub repository also: (https://github.com/rassel25/Student-Performance Prediction/tree/main/data)
+You can find the dataset in my GitHub repository also: https://github.com/rassel25/Student-Performance Prediction/tree/main/data
 
 The dataset contains the following columns:
 - gender : sex of students -> (Male/female)
