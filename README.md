@@ -116,32 +116,33 @@ Model performance for Test set
 
 - test_predict.py: to test the docker file
 
-- Deployment: Used AWS Beanstalk to deploy the dockerized file
+- Deployment: Used AWS ECS and EC2 to deploy the dockerized file
 
 ## Description of how to use the model
 
 ## Docker
 
-- isoloate the environment from the host machine
+- isolate the environment from the host machine
 - You can find docker image here https://hub.docker.com/_/python
 - I have chosen python:3.11 to match my python version
 - Build the docker image:  docker build -t student-prediction . 
 - Run the docker image: docker run -it --rm -p 9696:9696 student-prediction   
 - Test the docker image: python predict_test.py
 
-## Deploy to AWS Elastic Beanstalk
+## Deploy to AWS using ECS and EC2 instance
 
 - create an aws account
-- install eb cli as dev dependency pipenv install awsebcli --dev
-- go to virtual environment pipenv shell
-- initial the eb init -p "Docker running on 64bit Amazon Linux 2" parkinson-disease
-- ls -a to check whether there is .elasticbeanstalk folder
-- ls .elasticbeanstalk/ to check the doc inside the folder config.yml
-- run locally to test eb local run --port 9696
-- in another terminal run python predict_test.py to test
-- implement in the cloud: create a cloud environment -> eb create parkinson-disease-env
-- copy the service link to predict_test.py, update our url
-  
-![aws](https://github.com/rassel25/Parkinson-Disease-Detection/assets/36706178/aa21508a-65ce-490f-ada8-f3f91e966093)
+- create a repository in AWS ECR
+- install AWS CLI
+- push all your files to AWS repository using the push command given by the repository
+- create a cluster in AWS ECS
+- create a Task description in AWS ECS
+- Add the Task description to the AWS cluster that was built
+- go to AWS EC2 instance
+- change the inbound of security group in AWS EC2 instance
+- copy the Public IPv4 DNS from EC2 instance and paste it to a new window like this (Public IPv4 DNS:port) which our url for our website
+- url: http://ec2-34-241-92-66.eu-west-1.compute.amazonaws.com:9696 (here ec2-34-241-92-66.eu-west-1.compute.amazonaws.com is the Public IPv4 DNS and 9696 is the port)
 
-I have terminated AWS Beanstalk service to avoid generating extra fees.
+![ezgif-2-2823cd9db8](https://github.com/rassel25/Student-Performance-Prediction/assets/36706178/a1b85d0c-efa5-47ac-9d25-a410a35c1683)
+
+I have terminated AWS EC2 service to avoid generating extra fees.
