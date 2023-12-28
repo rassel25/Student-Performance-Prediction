@@ -120,6 +120,10 @@ Model performance for Test set
 
 ## Description of how to use the model
 
+## Dependencies
+
+- To install all the dependencies: poetry install
+
 ## Docker
 
 - isolate the environment from the host machine
